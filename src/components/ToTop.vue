@@ -1,6 +1,6 @@
 <template>
     <div class="scroll-to-top">
-        <button @click="scrollToTop()">
+        <button>
           <v-icon 
           name="hi-solid-arrow-up" 
           scale="2"

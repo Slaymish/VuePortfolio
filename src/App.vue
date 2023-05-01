@@ -37,7 +37,7 @@
     <div class="projects-grid">
       <CardComponent
         v-for="project in projectArray"
-        :key="project.title"
+        :key="project.id"
         :title="project.title"
         :description="project.description"
         :link="project.url"
@@ -66,6 +66,17 @@ import FooterComponent from './components/FooterComponent.vue'
 import { useFirebaseAuth } from 'vuefire';
 import { useCurrentUser } from 'vuefire'
 import ToTop from './components/ToTop.vue'
+
+import { useCollection } from 'vuefire'
+import { collection } from 'firebase/firestore'
+import { getFirestore } from 'firebase/firestore'
+
+
+// get projects from firestore
+const db = getFirestore()
+const projectArray = useCollection(collection(db, 'projects'))
+
+
 
 const user = useCurrentUser()
 const auth = useFirebaseAuth()
@@ -99,25 +110,9 @@ function authSignOut() {
   if (!auth) return
   auth.signOut()
 }
-
-
 </script>
 
-<script lang="ts">
-  import { getFirestore, collection, getDocs, type DocumentData } from 'firebase/firestore';
-  import { firebaseApp } from './firebase';
 
-  let projectArray = [];
-
-  const db = getFirestore(firebaseApp);
-  const querySnapshot = await getDocs(collection(db, "projects"));
-  const projects: DocumentData[] = [];
-  querySnapshot.forEach((doc) => {
-      projects.push(doc.data());
-  });
-  console.log(projects);
-  projectArray = projects;
-</script>
 
 
 <style>

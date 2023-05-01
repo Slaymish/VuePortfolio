@@ -1,7 +1,11 @@
+// Vue
 import { createApp } from 'vue'
-import { VueFire, VueFireAuth } from 'vuefire'
 import App from './App.vue'
+
+// Vuefire
+import { VueFire, VueFireAuth } from 'vuefire'
 import { firebaseApp } from './firebase'
+
 
 // Vuetify
 import 'vuetify/styles'
@@ -10,6 +14,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { VBtn } from 'vuetify/components'
 
+// Icons
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { MdEmailRound } from "oh-vue-icons/icons";
 import { BiGithub } from "oh-vue-icons/icons";
@@ -47,9 +52,10 @@ const vuetify = createVuetify({
   }
 })
 
-// Initialize Firebase
+// create vue app
 const app = createApp(App)
 
+// use vuefire
 app.use(VueFire, {
     firebaseApp,
     modules: [VueFireAuth()]
