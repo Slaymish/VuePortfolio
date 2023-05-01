@@ -12,8 +12,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.2.96",
     "firebase": "^9.20.0",
     "firebaseui": "^6.0.2",
+    "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vuefire": "^3.1.0",

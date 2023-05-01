@@ -1,0 +1,25 @@
+.footer-wrapper {
+  background-color: #aaaaaa;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
