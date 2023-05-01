@@ -22,6 +22,14 @@ import { BiInstagram } from "oh-vue-icons/icons";
 import { CoLinkedin } from "oh-vue-icons/icons";
 import { HiSolidArrowUp } from "oh-vue-icons/icons";
 
+// skill icons
+import { CoBlender } from "oh-vue-icons/icons";
+import { CoJava } from "oh-vue-icons/icons";
+import { CoVueJs } from "oh-vue-icons/icons";
+
+
+
+
 addIcons(MdEmailRound, BiGithub, BiInstagram, CoLinkedin, HiSolidArrowUp);
 
 

@@ -18,3 +18,4 @@ export const firebaseApp = initializeApp({
 // used for the databas refs
 const analytics = getAnalytics(firebaseApp)
 const perf = getPerformance(firebaseApp)
+

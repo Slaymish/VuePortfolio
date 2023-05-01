@@ -35,13 +35,26 @@
     <h1 id="projects">Projects</h1>
     <br />
     <div class="projects-grid">
+      <!-- Loop through projectarray if size > 0 -->
       <CardComponent
+        v-if="projectArray.length > 0"
         v-for="project in projectArray"
         :key="project.id"
         :title="project.title"
         :description="project.description"
         :link="project.url"
         :linkText="project.linkText"
+      />
+
+      <!-- If projectarray is empty, show skeleton cards -->
+      <CardComponent
+        v-else
+        v-for="n in 8"
+        :key="n"
+        title="Loading..."
+        description="Loading..."
+        link="#"
+        linkText="Loading..."
       />
     </div>
   </div>
@@ -148,6 +161,8 @@ function authSignOut() {
 
 .image {
   text-align: center;
+  width: 150px;
+  height: 150px;
 }
 
 .image img {
@@ -184,12 +199,13 @@ nav a {
 }
 
 nav a:hover {
-  color: ;
+  color: #2a2a2a;
 }
 
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    
   }
 
   .authBox {
