@@ -1,32 +1,77 @@
 <script lang="ts">
-    export default {
-        name: 'FooterComponent',
-        props: {
-            email: String,
-            githubName: String,
-            instagramName: String,
-            linkedinName: String,
-        }
-    }
+import { OhVueIcon } from 'oh-vue-icons'
+import { MdEmailRound } from 'oh-vue-icons/icons'
+import { BiGithub, BiInstagram } from 'oh-vue-icons/icons'
+import { CoLinkedin } from 'oh-vue-icons/icons'
+
+export default {
+  name: 'FooterComponent',
+  components: {
+    "v-icon": OhVueIcon
+  },
+  props: ['email', 'github', 'instagram', 'linkedin']
+}
 </script>
 
 <template>
-    <div class="footer-wrapper">
-        <div class="footer">
-            <div class="footer__socials">
-                <a :href="'mailto:' + email" target="_blank" rel="noopener noreferrer">
-                    <v-icon>mdi-email</v-icon>
-                </a>
-                <a :href="'https://www.github.com/' + githubName" target="_blank" rel="noopener noreferrer">
-                    <v-icon>mdi-github</v-icon>
-                </a>
-                <a :href="'https://www.instagram.com/' + instagramName" target="_blank" rel="noopener noreferrer">
-                    <v-icon>mdi-instagram</v-icon>
-                </a>
-                <a :href="'https://www.linkedin.com/in/' + linkedinName" target="_blank" rel="noopener noreferrer">
-                    <v-icon>mdi-linkedin</v-icon>
-                </a>
-            </div>
-        </div>
+  <div class="footer-wrapper">
+    <div class="footer__socials">
+      <a :href="email" target="_blank">
+        <v-icon 
+        name="md-email-round" 
+        scale="2"
+        />
+      </a>
+      <a :href="github" target="_blank">
+        <v-icon 
+        name="bi-github" 
+        scale="2"
+        />
+      </a>
+      <a :href="instagram" target="_blank">
+        <v-icon 
+        name="bi-instagram"
+        scale="2"
+        />
+      </a>
+      <a :href="linkedin" target="_blank">
+        <v-icon 
+        name="co-linkedin" 
+        scale="2"
+        />
+      </a>
     </div>
+  </div>
 </template>
+
+<style scoped>
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  color: #000000;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__socials a {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+v-icon {
+  color: #ff2c2c;
+  font-size: 1.5rem;
+}
+
+.footer__socials a:hover {
+  color: #585858;
+}
+</style>
