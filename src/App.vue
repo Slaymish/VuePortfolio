@@ -1,6 +1,7 @@
 <template>
   <header>
     <h1 id="top"></h1>
+    <!--
     <div class="authBox">
       <div v-if="user">
         <p>Hello {{ user.displayName }}!</p>
@@ -13,6 +14,7 @@
         <VBtnSecondary @click="signInWithGoogle()">Sign in with Google</VBtnSecondary>
       </div>
     </div>
+    -->
     <nav>
       <a href="#projects">Projects</a>
     </nav>
@@ -141,10 +143,10 @@ const projectArray = useCollection(collection(db, 'projects'))
 
 
 const user = useCurrentUser()
-const auth = useFirebaseAuth()
+//const auth = useFirebaseAuth()
 
 // make provider
-const provider = new OAuthProvider(ProviderId.GOOGLE)
+//const provider = new OAuthProvider(ProviderId.GOOGLE)
 
 function scrollToTop() {
   // scroll to top smoothly
@@ -155,6 +157,7 @@ function scrollToTop() {
 }
 
 // sign in method
+/*
 function signInWithGoogle() {
   console.log('signing in')
   if (!auth) return
@@ -172,6 +175,7 @@ function authSignOut() {
   if (!auth) return
   auth.signOut()
 }
+*/
 </script>
 
 

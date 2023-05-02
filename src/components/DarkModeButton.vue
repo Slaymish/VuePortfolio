@@ -65,7 +65,7 @@ import { OhVueIcon } from 'oh-vue-icons'
     .icon-wrapper {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         margin: 10px;
         transition: all 0.1s ease-in-out;
     }

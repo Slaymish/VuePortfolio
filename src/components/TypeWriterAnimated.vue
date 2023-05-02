@@ -15,7 +15,7 @@
       return {
         typeValue: "",
         typeStatus: false,
-        displayTextArray: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        displayTextArray: ["Programmer","Web Developer", "3D Designer", "Freelancer","Student"],
         typingSpeed: 100,
         erasingSpeed: 150,
         newTextDelay: 1300,
@@ -72,7 +72,7 @@
     margin: auto;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     span.typed-text {
       color: var(--main-color);
@@ -81,7 +81,7 @@
   
   // Cursor blinking CSS Starts...
   .blinking-cursor {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: normal;
     color: var(--cursor-color);
     -webkit-animation: 1s blink step-end infinite;
