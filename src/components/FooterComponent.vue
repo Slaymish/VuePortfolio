@@ -45,13 +45,14 @@ export default {
 </template>
 
 <style scoped>
+@import '../assets/theme.css';
 .footer-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
   width: 100%;
-  color: #000000;
+  color: var(--main-color);
 }
 
 .footer__socials {
@@ -62,16 +63,15 @@ export default {
 }
 
 .footer__socials a {
-  color: #000000;
+  color: var(--main-color);
   font-size: 1.5rem;
 }
 
 v-icon {
-  color: #ff2c2c;
   font-size: 1.5rem;
 }
 
 .footer__socials a:hover {
-  color: #585858;
+  color: var(--link-hover-color);
 }
 </style>

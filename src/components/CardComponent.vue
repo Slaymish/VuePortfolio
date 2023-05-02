@@ -12,7 +12,9 @@ export default {
 </script>
 
 <template>
-  <v-card width="400">
+  <v-card
+    class="mx-auto"
+  >
     <template v-slot:title>
       {{ title }}
     </template>
@@ -30,7 +32,24 @@ export default {
 </template>
 
 <style scoped>
-v-card {
+@import '../assets/theme.css';
+.mx-auto {
   margin: 0 auto;
+  width: 400px;
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--card-background);
+  background-color: var(--fallback-background-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease-in-out;
+  color: var(--main-color);
 }
+
+@media screen and (max-width: 798px) {
+  .mx-auto {
+    max-width: 700px;
+    width: 100%;
+  }
+}
+  
 </style>

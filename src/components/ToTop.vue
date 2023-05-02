@@ -29,12 +29,12 @@ export default {
   bottom: 20px;
   right: 20px;
   z-index: 99;
+  transition: transform 0.2s ease-in-out;
 }
 
 .scroll-to-top:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  transition: all 0.1s ease-in-out;
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 768px) {

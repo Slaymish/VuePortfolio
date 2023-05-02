@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style scoped>
+@import '../assets/theme.css';
 .icon-wrapper {
     display: flex;
     flex-direction: column;
@@ -44,17 +45,17 @@ export default {
     justify-content: center;
     margin: 0 10px;
     transition: all 0.1s ease-in-out;
+    transition: margin 0.2s ease-in-out; 
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--main-color);
 }
 
 .icon-wrapper:hover {
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.15s ease-in-out;
+    margin-top: -20px;
 }
 
 .text {

@@ -1,0 +1,30 @@
+.light{
+    --main-color: #222;
+    --main-background-color: linear-gradient(160deg, #fff 0%, #ddd 40%, #ddd 100%);
+    --fallback-background-color: #ddd;
+    --link-color: #222;
+    --link-hover-color: #303030;
+    --cursor-color: #222;
+    --card-background: radial-gradient(145% 145.46% at 0% 0%,#FFF 0%,#EEE 100%);
+    --card-shadow: 20px 20px 60px rgba(0,0,0,0.05), -20px -20px 60px rgba(255,255,255,0.8);
+}
+
+/* Dark mode colors */
+.dark{
+    --main-color: #fff;
+    --main-background-color: linear-gradient(160deg, #2a2a2a 0%, #1a1a1a 40%, #1a1a1a 100%);
+    --fallback-background-color: #2a2a2a;
+    --link-color: #fff;
+    --link-hover-color: #cbcbcb;
+    --cursor-color: #fff;
+    --card-background: radial-gradient(145% 145.46% at 0% 0%,#111 0%,#000 100%);
+    --card-shadow: 20px 20px 60px rgba(0,0,0,0.5), -20px -20px 60px rgba(255,255,255,0.05);
+}
+
+
+body {
+    background-color: var(--fallback-background-color);
+    background-image: var(--main-background-color);
+    color: var(--main-color);
+    transition: all 0.5s ease;
+}

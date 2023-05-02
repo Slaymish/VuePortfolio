@@ -18,10 +18,12 @@
     </nav>
   </header>
 
+  <DarkModeButton />
+
   <div class="container">
     <div id="about">
       <h1>Hi, I'm <span class="highlight">Hamish</span></h1>
-      <p>I'm a software developer and 3d designer.</p>
+      <TypeWriterAnimated />
       <br />
     </div>
     <div class="image">
@@ -127,7 +129,10 @@ import { collection } from 'firebase/firestore'
 import { getFirestore } from 'firebase/firestore'
 
 import SkillHoverIcon from './components/SkillHoverIcon.vue'
+import TypeWriterAnimated from './components/TypeWriterAnimated.vue'
 
+// Dark mode button
+import DarkModeButton from './components/DarkModeButton.vue'
 
 // get projects from firestore
 const db = getFirestore()
@@ -172,7 +177,7 @@ function authSignOut() {
 
 <style>
 @import './assets/main.css';
-
+@import './assets/theme.css';
 #about {
   text-align: center;
 }
@@ -210,13 +215,13 @@ function authSignOut() {
   align-items: center;
 
   /* make it a bit nicer */
-  background-color: #fff;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--card-shadow);
+  background: var(--card-background);
 
   /* make it a bit nicer */
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; 
 
 }
 
@@ -243,7 +248,7 @@ function authSignOut() {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 60px;
 }
 
 nav {
@@ -256,11 +261,11 @@ nav {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #000;
+  color: var(--link-color);
 }
 
 nav a:hover {
-  color: #2a2a2a;
+  color: var(--link-hover-color);
 }
 
 @media (max-width: 768px) {

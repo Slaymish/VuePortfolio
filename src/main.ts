@@ -30,8 +30,18 @@ import { CoHtml5 } from "oh-vue-icons/icons";
 import { MdCss } from "oh-vue-icons/icons";
 import { CoFirebase } from "oh-vue-icons/icons";
 
+// dark mode
+import { BiLightbulbFill } from "oh-vue-icons/icons"; //day
+import { BiLightbulbOff } from "oh-vue-icons/icons"; //night
 
-addIcons(MdEmailRound, BiGithub, BiInstagram, CoLinkedin, HiSolidArrowUp, CoBlender, CoJava, CoVueJs, CoHtml5, MdCss, CoFirebase);
+
+
+
+
+addIcons(MdEmailRound, BiGithub, BiInstagram, 
+  CoLinkedin, HiSolidArrowUp, CoBlender, CoJava, 
+  CoVueJs, CoHtml5, MdCss, CoFirebase,
+  BiLightbulbFill, BiLightbulbOff);
 
 
 // themes
