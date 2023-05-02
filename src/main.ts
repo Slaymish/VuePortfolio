@@ -26,11 +26,12 @@ import { HiSolidArrowUp } from "oh-vue-icons/icons";
 import { CoBlender } from "oh-vue-icons/icons";
 import { CoJava } from "oh-vue-icons/icons";
 import { CoVueJs } from "oh-vue-icons/icons";
+import { CoHtml5 } from "oh-vue-icons/icons";
+import { MdCss } from "oh-vue-icons/icons";
+import { CoFirebase } from "oh-vue-icons/icons";
 
 
-
-
-addIcons(MdEmailRound, BiGithub, BiInstagram, CoLinkedin, HiSolidArrowUp);
+addIcons(MdEmailRound, BiGithub, BiInstagram, CoLinkedin, HiSolidArrowUp, CoBlender, CoJava, CoVueJs, CoHtml5, MdCss, CoFirebase);
 
 
 // themes

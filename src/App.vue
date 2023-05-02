@@ -27,6 +27,48 @@
     <div class="image">
       <img src="https://picsum.photos/200/200" alt="Random image" />
     </div>
+    <div class="skills">
+      <h1>Skills</h1>
+      <br />
+      <div class="skills-grid">
+        <SkillHoverIcon
+          name="co-blender"
+          scale="5"
+          text="Blender"
+          url="https://www.blender.org/"
+        />
+        <SkillHoverIcon
+          name="co-java"
+          scale="5"
+          text="Java"
+          url="https://dev.java/"
+        />
+        <SkillHoverIcon
+          name="co-html5"
+          scale="5"
+          text="HTML"
+          url="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+        />
+        <SkillHoverIcon
+          name="md-css"
+          scale="5"
+          text="CSS"
+          url="https://developer.mozilla.org/en-US/docs/Web/CSS"
+        />
+        <SkillHoverIcon
+          name="co-vue-js"
+          scale="5"
+          text="Vue.js"
+          url="https://vuejs.org/"
+        />
+        <SkillHoverIcon
+          name="co-firebase"
+          scale="5"
+          text="Firebase"
+          url="https://firebase.google.com/"
+        />
+      </div>
+    </div>
 
   </div>
 
@@ -84,6 +126,8 @@ import { useCollection } from 'vuefire'
 import { collection } from 'firebase/firestore'
 import { getFirestore } from 'firebase/firestore'
 
+import SkillHoverIcon from './components/SkillHoverIcon.vue'
+
 
 // get projects from firestore
 const db = getFirestore()
@@ -126,14 +170,31 @@ function authSignOut() {
 </script>
 
 
-
-
 <style>
 @import './assets/main.css';
 
 #about {
   text-align: center;
 }
+
+.highlight {
+  color: #00b4d8;
+}
+
+.skills {
+  text-align: center;
+  margin: 20px;
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+
 
 .authBox {
   /* have auth box in top right corner */
@@ -205,7 +266,10 @@ nav a:hover {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
-    
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .authBox {
@@ -219,6 +283,10 @@ nav a:hover {
   .image img {
     width: 150px;
     height: 150px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
