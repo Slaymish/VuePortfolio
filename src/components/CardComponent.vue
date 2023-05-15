@@ -12,9 +12,7 @@ export default {
 </script>
 
 <template>
-  <v-card
-    class="mx-auto"
-  >
+  <v-card class="mx-auto">
     <template v-slot:title>
       {{ title }}
     </template>
@@ -51,5 +49,4 @@ export default {
     width: 100%;
   }
 }
-  
 </style>

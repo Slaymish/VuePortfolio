@@ -1,26 +1,21 @@
 <template>
-    <div class="scroll-to-top">
-        <button>
-          <v-icon 
-          name="hi-solid-arrow-up" 
-          scale="2"
-          />
-        </button>
-    </div> 
+  <div class="scroll-to-top">
+    <button>
+      <v-icon name="hi-solid-arrow-up" scale="2" />
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
 import { OhVueIcon } from 'oh-vue-icons'
-import { HiSolidArrowUp } from "oh-vue-icons/icons";
+import { HiSolidArrowUp } from 'oh-vue-icons/icons'
 
 export default {
-    name: 'ToTop',
-    components: {
-        "v-icon": OhVueIcon
-    }
+  name: 'ToTop',
+  components: {
+    'v-icon': OhVueIcon
+  }
 }
-
-
 </script>
 
 <style scoped>
@@ -43,5 +38,4 @@ export default {
     right: 10px;
   }
 }
-    
 </style>

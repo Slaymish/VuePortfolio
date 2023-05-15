@@ -6,7 +6,6 @@ import App from './App.vue'
 import { VueFire, VueFireAuth } from 'vuefire'
 import { firebaseApp } from './firebase'
 
-
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -15,41 +14,49 @@ import * as directives from 'vuetify/directives'
 import { VBtn } from 'vuetify/components'
 
 // Icons
-import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { MdEmailRound } from "oh-vue-icons/icons";
-import { BiGithub } from "oh-vue-icons/icons";
-import { BiInstagram } from "oh-vue-icons/icons";
-import { CoLinkedin } from "oh-vue-icons/icons";
-import { HiSolidArrowUp } from "oh-vue-icons/icons";
+import { OhVueIcon, addIcons } from 'oh-vue-icons'
+import { MdEmailRound } from 'oh-vue-icons/icons'
+import { BiGithub } from 'oh-vue-icons/icons'
+import { BiInstagram } from 'oh-vue-icons/icons'
+import { CoLinkedin } from 'oh-vue-icons/icons'
+import { HiSolidArrowUp } from 'oh-vue-icons/icons'
 
 // skill icons
-import { CoBlender } from "oh-vue-icons/icons";
-import { CoJava } from "oh-vue-icons/icons";
-import { CoVueJs } from "oh-vue-icons/icons";
-import { CoHtml5 } from "oh-vue-icons/icons";
-import { MdCss } from "oh-vue-icons/icons";
-import { CoFirebase } from "oh-vue-icons/icons";
+import { CoBlender } from 'oh-vue-icons/icons'
+import { CoJava } from 'oh-vue-icons/icons'
+import { CoVueJs } from 'oh-vue-icons/icons'
+import { CoHtml5 } from 'oh-vue-icons/icons'
+import { MdCss } from 'oh-vue-icons/icons'
+import { CoFirebase } from 'oh-vue-icons/icons'
+import { MdKeyboardarrowdown } from 'oh-vue-icons/icons'
 
 // dark mode
-import { BiLightbulbFill } from "oh-vue-icons/icons"; //day
-import { BiLightbulbOff } from "oh-vue-icons/icons"; //night
+import { BiLightbulbFill } from 'oh-vue-icons/icons' //day
+import { BiLightbulbOff } from 'oh-vue-icons/icons' //night
 
-
-
-
-
-addIcons(MdEmailRound, BiGithub, BiInstagram, 
-  CoLinkedin, HiSolidArrowUp, CoBlender, CoJava, 
-  CoVueJs, CoHtml5, MdCss, CoFirebase,
-  BiLightbulbFill, BiLightbulbOff);
-
+addIcons(
+  MdEmailRound,
+  BiGithub,
+  BiInstagram,
+  CoLinkedin,
+  HiSolidArrowUp,
+  CoBlender,
+  CoJava,
+  CoVueJs,
+  CoHtml5,
+  MdCss,
+  CoFirebase,
+  BiLightbulbFill,
+  BiLightbulbOff,
+  MdKeyboardarrowdown
+)
 
 // themes
 const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: 'light'
+    defaultTheme: 'dark'
   },
   aliases: {
     VBtnSecondary: VBtn,
@@ -75,10 +82,12 @@ const vuetify = createVuetify({
 const app = createApp(App)
 
 // use vuefire
-app.use(VueFire, {
+app
+  .use(VueFire, {
     firebaseApp,
     modules: [VueFireAuth()]
-  }).use(vuetify)
+  })
+  .use(vuetify)
 
-app.component("v-icon", OhVueIcon);
+app.component('v-icon', OhVueIcon)
 app.mount('#app')
