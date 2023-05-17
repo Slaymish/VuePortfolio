@@ -35,11 +35,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.1s ease-in-out;
   transition: margin-top 0.2s ease-in-out;
-  margin: auto;
 }
-
 a {
   text-decoration: none;
   color: var(--main-color);
@@ -47,13 +44,12 @@ a {
 
 .icon-wrapper:hover {
   cursor: pointer;
-  margin-top: -20px;
+  margin-top: -18px;
 }
 
 .text {
   text-align: center;
   font-size: 1rem;
-  margin-top: 5px;
 }
 
 @media screen and (max-width: 768px) {

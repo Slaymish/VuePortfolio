@@ -21,6 +21,7 @@ import { BiInstagram } from 'oh-vue-icons/icons'
 import { CoLinkedin } from 'oh-vue-icons/icons'
 import { HiSolidArrowUp } from 'oh-vue-icons/icons'
 
+
 // skill icons
 import { CoBlender } from 'oh-vue-icons/icons'
 import { CoJava } from 'oh-vue-icons/icons'
@@ -29,6 +30,8 @@ import { CoHtml5 } from 'oh-vue-icons/icons'
 import { MdCss } from 'oh-vue-icons/icons'
 import { CoFirebase } from 'oh-vue-icons/icons'
 import { MdKeyboardarrowdown } from 'oh-vue-icons/icons'
+import { CoPython } from "oh-vue-icons/icons";
+
 
 // dark mode
 import { BiLightbulbFill } from 'oh-vue-icons/icons' //day
@@ -48,7 +51,8 @@ addIcons(
   CoFirebase,
   BiLightbulbFill,
   BiLightbulbOff,
-  MdKeyboardarrowdown
+  MdKeyboardarrowdown,
+  CoPython
 )
 
 // themes

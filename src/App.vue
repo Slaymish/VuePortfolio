@@ -28,7 +28,7 @@
     <div class="skills">
       <div class="skill-header">
         <div class="skill-header-text">
-          <h1 id="skills">Skills</h1>
+          <h1 id="skills">About</h1>
           <div v-if="content.length > 0">
             <BoxComponent :description="content[0].skillpargraph" />
           </div>
@@ -61,7 +61,9 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="spacer"></div>
+
+  <div class="container projectwrap">
     <!-- Container for projects -->
     <h1 id="projects">Projects</h1>
     <br />
@@ -166,6 +168,10 @@ function scrollToTop() {
   width: 100%;
 }
 
+.spacer{
+  height: 50px;
+}
+
 .skill-header {
   margin: 0;
   padding: 0;
@@ -256,6 +262,10 @@ nav a:hover {
     width: 100%;
     margin-top: 10vh;
   }
+
+  .spacer {
+    height: 300px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -276,15 +286,24 @@ nav a:hover {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills-grid {
     grid-template-columns: repeat(v-bind(skilliconsLength), 1fr);
+  }
+
+  .container .projectwrap {
+    margin-top: 100px;
+  }
+
+  .spacer {
+    height: 350px;
   }
 }
 
@@ -315,13 +334,6 @@ nav a:hover {
   #projects {
     margin-top: 50px;
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .image img {
-    width: 100px;
-    height: 100px;
   }
 }
 </style>

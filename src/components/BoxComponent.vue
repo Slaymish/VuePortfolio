@@ -38,7 +38,7 @@ export default {
 
 @media (max-width: 600px) {
   .card-box {
-    width: 50%;
+    width: 100%;
   }
 }
 </style>
