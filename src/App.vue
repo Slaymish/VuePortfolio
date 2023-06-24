@@ -53,7 +53,7 @@
           v-for="n in 9"
           :key="n"
           name="Loading..."
-          scale="7"
+          :scale=7
           text="Loading..."
           url="#"
         />
@@ -168,7 +168,7 @@ function scrollToTop() {
   width: 100%;
 }
 
-.spacer{
+.spacer {
   height: 50px;
 }
 
@@ -268,6 +268,12 @@ nav a:hover {
   }
 }
 
+@media (max-width: 1350px) {
+  .projects-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1000px) {
   #about {
     font-size: 2.5rem;
@@ -286,12 +292,11 @@ nav a:hover {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .skills-grid {
@@ -314,7 +319,7 @@ nav a:hover {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
   }
 
@@ -329,6 +334,10 @@ nav a:hover {
 
   .skill-header-text h1 {
     font-size: 2rem;
+  }
+
+  .spacer {
+    height: 440px;
   }
 
   #projects {

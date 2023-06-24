@@ -15,7 +15,7 @@ export default {
     return {
       typeValue: '',
       typeStatus: false,
-      displayTextArray: ['Programmer', 'Web Developer', '3D Designer', 'Freelancer', 'Student'],
+      displayTextArray: ['Programmer', '3D Designer', 'Web Developer', 'DMs Open..', 'Student'],
       typingSpeed: 100,
       erasingSpeed: 150,
       newTextDelay: 1300,
